@@ -14,4 +14,14 @@ class MaintenanceLog extends Model
             'worked_on' => 'date',
         ];
     }
+
+    public function site()
+    {
+        return $this->belongsTo(Site::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

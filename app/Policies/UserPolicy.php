@@ -8,6 +8,6 @@ class UserPolicy
 {
     public function manage(User $user): bool
     {
-        return $user->isAdmin();
+        return $user->canManageOperations();
     }
 }

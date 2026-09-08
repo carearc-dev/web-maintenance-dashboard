@@ -24,6 +24,10 @@
                     <a href="{{ Route::has($route) ? route($route) : '#' }}" class="block rounded-md px-3 py-2 text-zinc-700 hover:bg-zinc-100">{{ $label }}</a>
                 @endforeach
             </nav>
+            <form method="post" action="{{ route('logout') }}" class="mt-6">
+                @csrf
+                <button class="w-full rounded-md border border-zinc-300 px-3 py-2 text-left text-sm text-zinc-700 hover:bg-zinc-100">ログアウト</button>
+            </form>
         </aside>
         <main class="px-5 py-6 lg:px-8">
             @yield('content')
